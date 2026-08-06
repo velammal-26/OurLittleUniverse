@@ -168,7 +168,7 @@ document.getElementById("beginButton").onclick=()=>{
 const chapterLines=[
 
 
-"Every beautiful story starts somewhere...",
+"Elaa Alagana Kathaiyum Oru alagah edathula Start Agum Nambalthu",
 
 
 "Ours started in a college...",
@@ -823,57 +823,42 @@ document.getElementById("giftNext").onclick=()=>{
 
 const letterText=[
 
+"Epadi iruku Suprise uhhhh😁",
 
-"Who knew...",
+"Yaruku Theriyum...!!   Oru simple Hi Bro 👋 ",
 
+"Ipadi oru Best Relationship ah enoda life la kondu varumnu",
 
-'One simple "Hi Bro 👋"',
+"First Mari irukana Theriyala But Una First Paka mothu Ena feel panano Athu ipo ila ",
 
+"Yen theriyuma Yena Un mela iruka LOVE🤍 increase agirukey thavara kamii agala-ya Movie dailog mari irukalam But Truth athan",
 
-"would become",
+"anddd Onething I need to tell ..! May be its be cringe but solanum Enaanaahhhh",
 
+"Na vera college poirukalam but ila ",
+"Vera dprt ah iruthurukalam but ila ",
+"Yen vera ah Section lakuda poirukalam",
+"But All happened For some reasons Just to make me meet you and to make me fall in love with you🤍",
+"Still u been for me in my Ups And Downs ",
+"And Did So many Things for me",
+"Do You Remember 'Ena Vitu Poida Matala' 😄 yeah Always",
+"I will always there for u Alagah..!!!",
+"I know Sometime I Mad u Mad ,Cry,Also sometimes atleast a little bit Smile",
+"But Ne pandrathula Na poruthutu iruken😒",
+"Unoda 40 Keeps kuda Gujaal Panitu irukaa",
+"Sari ila Avlothan Inimey Panatha avlotha sola mudiyum",
+"And Na oru sila things NOte Pani vachiruthen kamikaren",
+"(2024)September --14 .Abt one boy", 
+"(2024) September --16 st to talk",
+"(2024) October --6 1st tym went out with clg frds",
+"(2025) Jan 11 (Pongal celebration)",
+   "(2025)Feb 13( started  again to talk)",
+"(2025)Feb 26(the Biggest day that never forgot present ring 7:17 and told me at 7:57)",
+"(2025)June 7 -- Pooja v2ku bike la ponom 🫣",
+"INum iruku but perusa pogum So I stop here",
 
-"one of the best moments",
-
-
-"of my life.",
-
-
-"",
-
-
-"Thank you",
-
-
-"For every smile",
-
-
-"For every laugh",
-
-
-"For every memory",
-
-
-"For every little moment.",
-
-
-"",
-
-
-"No matter where life takes us...",
-
-
-"You will always have",
-
-
-"A special place",
-
-
-"In my little universe.",
-
-
-"",
-
+"Unta Romba Pidichathu Smile tha sirichitey iru Athukunu suma siricha Paithiyam nenaichipaga Happy ah irunu solren",
+"Love You As Always🤍",
 
 "With love, 🤍"
 
