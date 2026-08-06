@@ -1,0 +1,3394 @@
+/* =========================================
+   OUR LITTLE UNIVERSE
+   PREMIUM LOVE STORY WEBSITE
+   STYLE.CSS PART 1/4
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    width:100%;
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    background:
+    radial-gradient(circle at top,#1e40af 0%,#07111f 35%,#020617 100%);
+
+    color:white;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+
+
+
+/* =========================================
+   BACKGROUND STARS
+========================================= */
+
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+    radial-gradient(#ffffff 1px,transparent 1px);
+
+    background-size:55px 55px;
+
+    opacity:.25;
+
+    animation:
+    starMove 40s linear infinite;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+
+
+@keyframes starMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-300px);
+
+    }
+
+}
+
+
+
+
+
+/* =========================================
+   COMMON SCREEN
+========================================= */
+
+
+.screen{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+
+    position:relative;
+
+}
+
+
+
+.screen.active{
+
+    display:flex;
+
+    animation:
+    screenFade 1s ease;
+
+}
+
+
+
+@keyframes screenFade{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.97);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+
+.hidden{
+
+    display:none !important;
+
+}
+
+
+
+
+/* =========================================
+   GLASS EFFECT
+========================================= */
+
+
+.glass-card{
+
+    background:
+    rgba(255,255,255,.08);
+
+
+    border:
+
+    1px solid rgba(255,255,255,.18);
+
+
+    backdrop-filter:
+
+    blur(20px);
+
+
+
+    border-radius:30px;
+
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.45);
+
+}
+
+
+
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+
+.main-button,
+.story-next{
+
+
+    border:none;
+
+    outline:none;
+
+
+    padding:
+
+    16px 40px;
+
+
+
+    border-radius:
+
+    50px;
+
+
+
+    cursor:pointer;
+
+
+
+    font-size:18px;
+
+
+
+    color:white;
+
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #2563eb,
+    #93c5fd
+    );
+
+
+
+    box-shadow:
+
+    0 0 25px #60a5fa;
+
+
+
+    transition:.4s;
+
+
+
+    margin-top:35px;
+
+
+}
+
+
+
+.main-button:hover,
+.story-next:hover{
+
+
+    transform:
+
+    translateY(-6px)
+    scale(1.05);
+
+
+
+    box-shadow:
+
+    0 0 45px #93c5fd;
+
+
+}
+
+
+
+
+
+/* =========================================
+   MUSIC BUTTON
+========================================= */
+
+
+.music-button{
+
+
+    position:fixed;
+
+
+    right:25px;
+
+
+    bottom:25px;
+
+
+
+    width:60px;
+
+
+    height:60px;
+
+
+
+    border-radius:50%;
+
+
+
+    border:none;
+
+
+
+    background:#2563eb;
+
+
+
+    color:white;
+
+
+
+    font-size:25px;
+
+
+
+    cursor:pointer;
+
+
+
+    z-index:9999;
+
+
+
+    box-shadow:
+
+    0 0 30px #60a5fa;
+
+
+
+}
+
+
+
+.music-button:hover{
+
+
+    transform:scale(1.1);
+
+
+}
+
+
+
+
+
+/* =========================================
+   LOADING SCREEN
+========================================= */
+
+
+#loadingScreen{
+
+
+    position:fixed;
+
+    inset:0;
+
+    background:#020617;
+
+    z-index:99999;
+
+}
+
+
+
+.loading-content{
+
+
+    text-align:center;
+
+
+}
+
+
+
+.loading-butterfly{
+
+
+    font-size:90px;
+
+
+    animation:
+
+    butterflyFloat 3s infinite;
+
+
+}
+
+
+
+@keyframes butterflyFloat{
+
+
+    50%{
+
+        transform:
+
+        translateY(-25px);
+
+    }
+
+
+}
+
+
+
+.small-label{
+
+
+    margin-top:20px;
+
+
+    letter-spacing:5px;
+
+
+    color:#93c5fd;
+
+
+    text-transform:uppercase;
+
+
+}
+
+
+
+.loading-content h1{
+
+
+    margin-top:20px;
+
+
+    font-family:
+
+    "Cormorant Garamond",
+    serif;
+
+
+    font-size:60px;
+
+
+}
+
+
+
+.loading-line{
+
+
+    width:330px;
+
+
+    height:8px;
+
+
+    background:#172554;
+
+
+    border-radius:20px;
+
+
+    margin:35px auto;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+.loading-progress{
+
+
+    width:0;
+
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #2563eb,
+    white
+    );
+
+
+
+    animation:
+
+    loadingBar 3s forwards;
+
+
+}
+
+
+
+@keyframes loadingBar{
+
+
+    to{
+
+        width:100%;
+
+    }
+
+}
+
+
+
+
+
+/* =========================================
+   WELCOME SCREEN
+========================================= */
+
+
+.welcome-card{
+
+
+    width:850px;
+
+
+    max-width:95%;
+
+
+    padding:70px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+.eyebrow{
+
+
+    color:#93c5fd;
+
+
+    letter-spacing:5px;
+
+
+    text-transform:uppercase;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+.main-title{
+
+
+    margin:25px 0;
+
+
+    font-family:
+
+    "Cormorant Garamond",
+    serif;
+
+
+
+    font-size:80px;
+
+
+}
+
+
+
+.main-title span{
+
+
+    color:#60a5fa;
+
+
+}
+
+
+
+.welcome-symbols{
+
+
+    font-size:35px;
+
+
+    margin:20px;
+
+
+}
+
+
+
+.welcome-text{
+
+
+    font-size:22px;
+
+
+    line-height:1.8;
+
+
+    color:#dbeafe;
+
+
+}
+
+
+
+.tiny-text{
+
+
+    margin-top:25px;
+
+
+    opacity:.7;
+
+
+}
+
+/* =========================================
+   CHAPTER SECTIONS
+========================================= */
+
+
+.story-container{
+
+    width:900px;
+
+    max-width:95%;
+
+    text-align:center;
+
+}
+
+
+
+.chapter-number{
+
+    color:#60a5fa;
+
+    letter-spacing:7px;
+
+    font-size:15px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.chapter-title{
+
+    font-family:
+    "Cormorant Garamond",
+    serif;
+
+    font-size:65px;
+
+    line-height:1.2;
+
+}
+
+
+
+.chapter-subtitle{
+
+    margin-top:25px;
+
+    color:#dbeafe;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+.chapter-divider{
+
+    color:#60a5fa;
+
+    font-size:35px;
+
+    margin:25px;
+
+}
+
+
+
+
+
+.typewriter-text{
+
+
+    margin-top:40px;
+
+
+    min-height:200px;
+
+
+    font-size:28px;
+
+
+    line-height:2;
+
+
+    color:#f8fafc;
+
+
+}
+
+
+
+
+
+/* =========================================
+   CHAPTER 2 BUTTERFLY
+========================================= */
+
+
+.butterfly-title span{
+
+
+    color:#93c5fd;
+
+
+}
+
+
+
+.white-butterfly-symbol{
+
+
+    font-size:100px;
+
+
+    margin:35px;
+
+
+    animation:
+
+    butterflyFly 5s infinite;
+
+
+}
+
+
+
+
+@keyframes butterflyFly{
+
+
+    0%{
+
+        transform:
+
+        translateX(-30px)
+        translateY(0);
+
+    }
+
+
+    50%{
+
+
+        transform:
+
+        translateX(30px)
+        translateY(-25px);
+
+
+    }
+
+
+
+    100%{
+
+
+        transform:
+
+        translateX(-30px)
+        translateY(0);
+
+
+    }
+
+
+}
+
+
+
+
+/* =========================================
+   BLUE SHIRT MEMORY
+========================================= */
+
+
+.college-scene{
+
+
+    text-align:center;
+
+
+}
+
+
+
+.scene-date{
+
+
+    color:#93c5fd;
+
+
+    letter-spacing:3px;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.shirt-card{
+
+
+    width:280px;
+
+
+    height:280px;
+
+
+    margin:auto;
+
+
+    position:relative;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+}
+
+
+
+.shirt-glow{
+
+
+    position:absolute;
+
+
+    width:250px;
+
+
+    height:250px;
+
+
+    border-radius:50%;
+
+
+    background:#2563eb55;
+
+
+    filter:blur(50px);
+
+
+}
+
+
+
+.blue-shirt{
+
+
+    width:190px;
+
+
+    z-index:2;
+
+
+    animation:
+
+    shirtFloat 3s infinite;
+
+
+}
+
+
+
+@keyframes shirtFloat{
+
+
+    50%{
+
+
+        transform:
+
+        translateY(-20px);
+
+
+    }
+
+
+}
+
+
+
+.dialogue-bubble{
+
+
+    margin:40px auto;
+
+
+    width:max-content;
+
+
+    max-width:90%;
+
+
+    padding:18px 35px;
+
+
+    background:#2563eb;
+
+
+    border-radius:50px;
+
+
+    font-size:22px;
+
+
+    box-shadow:
+
+    0 0 30px #2563eb;
+
+
+}
+
+
+
+
+.scene-story{
+
+
+    font-size:22px;
+
+
+    line-height:2;
+
+
+}
+
+
+
+.scene-story strong{
+
+
+    color:#60a5fa;
+
+
+    font-size:30px;
+
+
+}
+
+
+
+
+
+/* =========================================
+   PHONE CHAT
+========================================= */
+
+
+.phone-scene-wrapper{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    align-items:center;
+
+
+}
+
+
+
+.phone{
+
+
+    width:370px;
+
+
+    max-width:95%;
+
+
+    border-radius:40px;
+
+
+    overflow:hidden;
+
+
+    background:#111827;
+
+
+    margin-top:40px;
+
+
+    box-shadow:
+
+    0 0 50px rgba(0,0,0,.7);
+
+
+}
+
+
+
+
+.phone-header{
+
+
+    background:#2563eb;
+
+
+    padding:15px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+}
+
+
+
+.profile-circle{
+
+
+    width:45px;
+
+
+    height:45px;
+
+
+    background:white;
+
+
+    border-radius:50%;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    margin:0 12px;
+
+
+}
+
+
+
+.profile-info{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+}
+
+
+
+.profile-info span{
+
+
+    font-size:12px;
+
+
+    opacity:.8;
+
+
+}
+
+
+
+
+.chat-background{
+
+
+    min-height:430px;
+
+
+    padding:20px;
+
+
+    background:#0f172a;
+
+
+}
+
+
+
+.chat-date{
+
+
+    text-align:center;
+
+
+    color:#94a3b8;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+.message{
+
+
+    padding:12px 18px;
+
+
+    border-radius:20px;
+
+
+    max-width:80%;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.outgoing{
+
+
+    margin-left:auto;
+
+
+    background:#2563eb;
+
+
+}
+
+
+
+.incoming{
+
+
+    background:#1e293b;
+
+
+}
+
+
+
+
+.message small{
+
+
+    display:block;
+
+
+    font-size:11px;
+
+
+    margin-top:8px;
+
+
+    opacity:.6;
+
+
+}
+
+
+
+
+.typing-message{
+
+
+    display:flex;
+
+
+    gap:7px;
+
+
+}
+
+
+
+.typing-dot{
+
+
+    width:8px;
+
+
+    height:8px;
+
+
+    border-radius:50%;
+
+
+    background:white;
+
+
+    animation:typingDots .8s infinite;
+
+
+}
+
+
+
+.typing-dot:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+
+
+.typing-dot:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+
+
+@keyframes typingDots{
+
+
+    50%{
+
+        opacity:.2;
+
+    }
+
+
+}
+
+
+
+
+
+.notification-story{
+
+
+    margin-top:35px;
+
+
+    text-align:center;
+
+
+    font-size:23px;
+
+
+    line-height:2;
+
+
+}
+
+
+
+.notification-heart{
+
+
+    font-size:45px;
+
+
+    margin-top:20px;
+
+
+}
+
+/* =========================================
+   CHAPTER 3 - FIRST SELFIE POLAROID
+========================================= */
+
+
+.selfie-wrapper{
+
+    text-align:center;
+
+    width:100%;
+
+}
+
+
+
+.polaroid{
+
+
+    width:360px;
+
+
+    max-width:90%;
+
+
+    margin:auto;
+
+
+    padding:20px;
+
+
+    background:#ffffff;
+
+
+    color:#111827;
+
+
+    transform:
+
+    rotate(-5deg);
+
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.5);
+
+
+    position:relative;
+
+
+    animation:
+
+    polaroidDrop 1.5s ease;
+
+
+}
+
+
+
+.polaroid img{
+
+
+    width:100%;
+
+
+    height:360px;
+
+
+    object-fit:cover;
+
+
+}
+
+
+
+.polaroid-caption{
+
+
+    font-family:
+
+    "Cormorant Garamond",
+    serif;
+
+
+    font-size:28px;
+
+
+    padding:20px 0 10px;
+
+
+}
+
+
+
+
+
+@keyframes polaroidDrop{
+
+
+    from{
+
+
+        opacity:0;
+
+
+        transform:
+
+        translateY(-300px)
+        rotate(-20deg);
+
+
+    }
+
+
+    to{
+
+
+        opacity:1;
+
+
+        transform:
+
+        translateY(0)
+        rotate(-5deg);
+
+
+    }
+
+
+}
+
+
+
+
+.tape{
+
+
+    position:absolute;
+
+
+    width:90px;
+
+
+    height:25px;
+
+
+    background:
+
+    rgba(255,255,255,.5);
+
+
+    top:-12px;
+
+
+}
+
+
+
+.tape-left{
+
+
+    left:20px;
+
+
+    transform:rotate(-20deg);
+
+
+}
+
+
+
+.tape-right{
+
+
+    right:20px;
+
+
+    transform:rotate(20deg);
+
+
+}
+
+
+
+
+.selfie-story{
+
+
+    margin-top:50px;
+
+
+    font-size:24px;
+
+
+    line-height:2;
+
+
+}
+
+
+
+
+
+.floating-symbols{
+
+
+    font-size:40px;
+
+
+    margin-top:20px;
+
+
+    animation:
+
+    heartFloat 4s infinite;
+
+
+}
+
+
+
+
+/* =========================================
+   TIMELINE JOURNEY
+========================================= */
+
+
+.journey-wrapper{
+
+
+    width:1000px;
+
+
+    max-width:95%;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.timeline{
+
+
+    position:relative;
+
+
+    margin-top:60px;
+
+
+}
+
+
+
+.timeline::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    left:50%;
+
+
+    top:0;
+
+
+    width:4px;
+
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+    #60a5fa,
+    transparent
+    );
+
+
+    transform:
+
+    translateX(-50%);
+
+
+}
+
+
+
+.timeline-item{
+
+
+    width:50%;
+
+
+    padding:30px;
+
+
+    position:relative;
+
+
+}
+
+
+
+.timeline-item:nth-child(odd){
+
+
+    margin-right:auto;
+
+
+    text-align:right;
+
+
+}
+
+
+
+.timeline-item:nth-child(even){
+
+
+    margin-left:auto;
+
+
+    text-align:left;
+
+
+}
+
+
+
+
+
+.timeline-dot{
+
+
+    width:20px;
+
+
+    height:20px;
+
+
+    border-radius:50%;
+
+
+    background:white;
+
+
+    box-shadow:
+
+    0 0 25px white;
+
+
+    position:absolute;
+
+
+    top:45px;
+
+
+}
+
+
+
+.timeline-item:nth-child(odd)
+.timeline-dot{
+
+
+    right:-10px;
+
+
+}
+
+
+
+.timeline-item:nth-child(even)
+.timeline-dot{
+
+
+    left:-10px;
+
+
+}
+
+
+
+
+.timeline-card{
+
+
+    padding:30px;
+
+
+}
+
+
+
+.timeline-card h3{
+
+
+    color:#93c5fd;
+
+
+    font-size:30px;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+.timeline-card p{
+
+
+    line-height:1.8;
+
+
+    color:#dbeafe;
+
+
+}
+
+
+
+
+
+/* =========================================
+   MEMORY GALLERY
+========================================= */
+
+
+.gallery-wrapper{
+
+
+    width:1200px;
+
+
+    max-width:95%;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+.memory-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(250px,1fr));
+
+
+    gap:35px;
+
+
+    margin-top:50px;
+
+
+}
+
+
+
+
+.memory-photo{
+
+
+    border:none;
+
+
+    overflow:hidden;
+
+
+    cursor:pointer;
+
+
+    border-radius:25px;
+
+
+    background:
+
+    rgba(255,255,255,.08);
+
+
+    backdrop-filter:
+
+    blur(15px);
+
+
+    transition:.5s;
+
+
+}
+
+
+
+.memory-photo img{
+
+
+    width:100%;
+
+
+    height:320px;
+
+
+    object-fit:cover;
+
+
+}
+
+
+
+.memory-photo span{
+
+
+    display:block;
+
+
+    padding:20px;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+.memory-photo:hover{
+
+
+    transform:
+
+    translateY(-15px)
+    rotate(-3deg);
+
+
+    box-shadow:
+
+    0 0 40px #60a5fa;
+
+
+}
+
+
+
+
+/* =========================================
+   FULLSCREEN IMAGE MODAL
+========================================= */
+
+
+.photo-modal{
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    background:
+
+    rgba(0,0,0,.92);
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    flex-direction:column;
+
+
+    z-index:99999;
+
+
+}
+
+
+
+.photo-modal img{
+
+
+    max-width:90%;
+
+
+    max-height:80%;
+
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 0 50px white;
+
+
+}
+
+
+
+.modal-close{
+
+
+    position:absolute;
+
+
+    right:35px;
+
+
+    top:25px;
+
+
+    background:none;
+
+
+    border:none;
+
+
+    color:white;
+
+
+    font-size:50px;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+/* =========================================
+   SECRET BUTTERFLY
+========================================= */
+
+
+.secret-butterfly{
+
+
+    margin-top:40px;
+
+
+    background:none;
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    font-size:70px;
+
+
+    animation:
+
+    butterflyFloat 4s infinite;
+
+
+}
+
+
+
+.secret-message-card{
+
+
+    margin-top:40px;
+
+
+    padding:40px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+.secret-message-card h2{
+
+
+    color:#93c5fd;
+
+
+    font-family:
+
+    "Cormorant Garamond",
+    serif;
+
+
+    font-size:45px;
+
+
+}
+
+/* =========================================
+   FLOWER SURPRISE
+========================================= */
+
+
+.flower-button{
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    margin-top:50px;
+
+}
+
+
+
+.flower{
+
+    width:180px;
+
+    height:260px;
+
+    position:relative;
+
+    margin:auto;
+
+}
+
+
+
+.petal{
+
+    position:absolute;
+
+    width:60px;
+
+    height:80px;
+
+    background:white;
+
+    border-radius:60%;
+
+    opacity:.35;
+
+    transition:1s;
+
+    box-shadow:
+
+    0 0 20px white;
+
+}
+
+
+
+.petal-1{
+
+    left:60px;
+
+    top:0;
+
+}
+
+
+.petal-2{
+
+    left:10px;
+
+    top:50px;
+
+}
+
+
+
+.petal-3{
+
+    right:10px;
+
+    top:50px;
+
+}
+
+
+
+.petal-4{
+
+    left:25px;
+
+    top:120px;
+
+}
+
+
+
+.petal-5{
+
+    right:25px;
+
+    top:120px;
+
+}
+
+
+
+.petal-6{
+
+    left:60px;
+
+    top:150px;
+
+}
+
+
+
+
+.flower-center{
+
+    position:absolute;
+
+    top:75px;
+
+    left:70px;
+
+    width:45px;
+
+    height:45px;
+
+    background:#facc15;
+
+    border-radius:50%;
+
+    z-index:3;
+
+}
+
+
+
+
+.flower-stem{
+
+    position:absolute;
+
+    top:120px;
+
+    left:88px;
+
+    width:8px;
+
+    height:120px;
+
+    background:#22c55e;
+
+}
+
+
+
+.flower-leaf{
+
+    position:absolute;
+
+    width:50px;
+
+    height:25px;
+
+    background:#22c55e;
+
+    border-radius:50%;
+
+}
+
+
+
+.leaf-left{
+
+    top:180px;
+
+    left:40px;
+
+    transform:rotate(-30deg);
+
+}
+
+
+
+.leaf-right{
+
+    top:200px;
+
+    right:35px;
+
+    transform:rotate(30deg);
+
+}
+
+
+
+
+.bloom .petal{
+
+    opacity:1;
+
+    transform:
+
+    scale(1.25);
+
+}
+
+
+
+
+
+.flower-message{
+
+    margin-top:40px;
+
+    font-size:26px;
+
+}
+
+
+
+
+
+/* =========================================
+   GIFT BOX
+========================================= */
+
+
+.gift-button{
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    margin-top:50px;
+
+}
+
+
+
+.gift{
+
+    width:190px;
+
+    height:170px;
+
+    position:relative;
+
+}
+
+
+
+.gift-box{
+
+
+    position:absolute;
+
+    bottom:0;
+
+    width:190px;
+
+    height:120px;
+
+    background:#2563eb;
+
+    border-radius:15px;
+
+}
+
+
+
+.gift-lid{
+
+
+    position:absolute;
+
+    top:0;
+
+    width:190px;
+
+    height:45px;
+
+    background:#60a5fa;
+
+    border-radius:15px;
+
+    transition:1s;
+
+}
+
+
+
+.gift-ribbon{
+
+
+    width:20px;
+
+    height:120px;
+
+    background:white;
+
+    margin:auto;
+
+}
+
+
+
+.gift.open .gift-lid{
+
+
+    transform:
+
+    translateY(-80px)
+    rotate(-15deg);
+
+}
+
+
+
+.gift-message{
+
+
+    margin-top:40px;
+
+    text-align:center;
+
+    font-size:22px;
+
+}
+
+
+
+
+
+/* =========================================
+   LOVE LETTER
+========================================= */
+
+
+.envelope-button{
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+
+
+.envelope{
+
+
+    width:300px;
+
+    height:200px;
+
+    background:#ffffff;
+
+    position:relative;
+
+    border-radius:15px;
+
+    margin:40px auto;
+
+}
+
+
+
+.envelope-flap{
+
+
+    position:absolute;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:#dbeafe;
+
+    clip-path:
+
+    polygon(0 0,100% 0,50% 60%);
+
+}
+
+
+
+.envelope-seal{
+
+
+    position:absolute;
+
+    top:80px;
+
+    left:130px;
+
+    width:45px;
+
+    height:45px;
+
+    background:#2563eb;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+}
+
+
+
+.letter-paper{
+
+
+    width:750px;
+
+    max-width:90%;
+
+    background:white;
+
+    color:#111827;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    margin-top:40px;
+
+    box-shadow:
+
+    0 0 50px white;
+
+}
+
+
+
+.letter-content{
+
+
+    font-size:20px;
+
+    line-height:2;
+
+}
+
+
+
+.letter-signature{
+
+
+    margin-top:40px;
+
+    text-align:right;
+
+}
+
+
+
+
+
+/* =========================================
+   FINAL SCENE
+========================================= */
+
+
+.final-content{
+
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+
+
+.final-moon{
+
+
+    position:absolute;
+
+    width:230px;
+
+    height:230px;
+
+    border-radius:50%;
+
+    background:white;
+
+    top:70px;
+
+    right:100px;
+
+    box-shadow:
+
+    0 0 90px white;
+
+}
+
+
+
+.final-butterfly{
+
+
+    font-size:100px;
+
+    animation:
+
+    butterflyFloat 4s infinite;
+
+}
+
+
+
+.final-title{
+
+
+    font-family:
+
+    "Cormorant Garamond",
+    serif;
+
+
+    font-size:80px;
+
+
+}
+
+
+
+.final-message{
+
+
+    margin-top:40px;
+
+    font-size:25px;
+
+    line-height:2;
+
+}
+
+
+
+.final-message h2{
+
+
+    color:#93c5fd;
+
+    font-family:
+
+    "Cormorant Garamond",
+    serif;
+
+    font-size:55px;
+
+}
+
+
+
+.the-end h1{
+
+
+    color:#60a5fa;
+
+    font-size:100px;
+
+}
+
+
+
+
+
+/* =========================================
+   CONFETTI
+========================================= */
+
+
+.confetti{
+
+
+    position:fixed;
+
+    top:-20px;
+
+    width:12px;
+
+    height:12px;
+
+    background:#60a5fa;
+
+    animation:
+
+    fall 4s linear forwards;
+
+}
+
+
+
+@keyframes fall{
+
+
+    to{
+
+        transform:
+
+        translateY(110vh)
+        rotate(720deg);
+
+        opacity:0;
+
+    }
+
+
+}
+
+
+
+
+
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+
+@keyframes heartFloat{
+
+
+    from{
+
+
+        transform:
+
+        translateY(0);
+
+        opacity:1;
+
+
+    }
+
+
+    to{
+
+
+        transform:
+
+        translateY(-120vh);
+
+        opacity:0;
+
+
+    }
+
+}
+
+
+
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+
+@media(max-width:768px){
+
+
+    .main-title{
+
+        font-size:48px;
+
+    }
+
+
+    .chapter-title{
+
+        font-size:42px;
+
+    }
+
+
+
+    .chapter-subtitle{
+
+        font-size:18px;
+
+    }
+
+
+
+    .typewriter-text{
+
+        font-size:20px;
+
+    }
+
+
+
+    .timeline::before{
+
+        left:10px;
+
+    }
+
+
+
+    .timeline-item{
+
+        width:100%;
+
+        text-align:left !important;
+
+        padding-left:45px;
+
+    }
+
+
+
+    .timeline-item .timeline-dot{
+
+
+        left:0 !important;
+
+        right:auto;
+
+    }
+
+
+
+    .polaroid{
+
+
+        width:300px;
+
+    }
+
+
+
+    .letter-paper{
+
+        padding:25px;
+
+    }
+
+
+
+    .final-title{
+
+        font-size:45px;
+
+    }
+
+
+
+    .final-message{
+
+        font-size:18px;
+
+    }
+
+
+
+    .final-moon{
+
+        width:120px;
+
+        height:120px;
+
+        right:30px;
+
+    }
+
+
+}
+
+/* =========================
+   SELFIE SCENE
+========================= */
+
+.selfie-wrapper{
+    text-align:center;
+    width:100%;
+}
+
+
+.polaroid{
+
+    width:380px;
+    max-width:90%;
+
+    background:white;
+
+    padding:20px;
+    padding-bottom:35px;
+
+    margin:auto;
+
+    transform:rotate(-4deg);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.5);
+
+    animation:polaroidDrop 1.5s ease;
+
+}
+
+
+.polaroid img{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+}
+
+
+
+.polaroid-caption{
+
+    color:#111827;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:28px;
+
+    margin-top:20px;
+
+}
+
+
+
+.tape{
+
+    position:absolute;
+
+    width:80px;
+
+    height:25px;
+
+    background:#ffffffaa;
+
+}
+
+
+
+.tape-left{
+
+    top:-15px;
+
+    left:40px;
+
+    transform:rotate(-20deg);
+
+}
+
+
+
+.tape-right{
+
+    top:-15px;
+
+    right:40px;
+
+    transform:rotate(20deg);
+
+}
+
+
+
+@keyframes polaroidDrop{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(-300px)
+        rotate(-20deg);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        rotate(-4deg);
+
+    }
+
+}
+
+
+
+.selfie-story{
+
+    margin-top:40px;
+
+    font-size:25px;
+
+    line-height:2;
+
+}
+
+
+
+.floating-symbols{
+
+    font-size:40px;
+
+    margin-top:25px;
+
+    animation:floatSymbols 3s infinite;
+
+}
+
+
+
+@keyframes floatSymbols{
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+}
+
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+
+.journey-wrapper{
+
+    width:1100px;
+
+    max-width:95%;
+
+    text-align:center;
+
+}
+
+
+
+.timeline{
+
+    position:relative;
+
+    margin-top:60px;
+
+}
+
+
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    height:100%;
+
+    width:3px;
+
+    background:#60a5fa;
+
+    transform:translateX(-50%);
+
+}
+
+
+
+.timeline-item{
+
+    width:50%;
+
+    padding:30px;
+
+    position:relative;
+
+}
+
+
+
+.timeline-item:nth-child(odd){
+
+    margin-right:auto;
+
+    text-align:right;
+
+}
+
+
+
+.timeline-item:nth-child(even){
+
+    margin-left:auto;
+
+    text-align:left;
+
+}
+
+
+
+.timeline-dot{
+
+    width:20px;
+
+    height:20px;
+
+    background:white;
+
+    border-radius:50%;
+
+    box-shadow:
+
+    0 0 20px #ffffff;
+
+    position:absolute;
+
+    top:40px;
+
+}
+
+
+
+.timeline-item:nth-child(odd) .timeline-dot{
+
+    right:-10px;
+
+}
+
+
+
+.timeline-item:nth-child(even) .timeline-dot{
+
+    left:-10px;
+
+}
+
+
+
+.timeline-card{
+
+    padding:30px;
+
+}
+
+
+
+.timeline-card h3{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:35px;
+
+    color:#93c5fd;
+
+}
+
+
+
+.timeline-card p{
+
+    margin-top:15px;
+
+    line-height:1.7;
+
+    color:#dbeafe;
+
+}
+
+
+
+/* =========================
+   GALLERY
+========================= */
+
+
+.gallery-wrapper{
+
+    width:1200px;
+
+    max-width:95%;
+
+    text-align:center;
+
+}
+
+
+
+.memory-grid{
+
+    margin-top:50px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(230px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.memory-photo{
+
+    border:none;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    transition:.5s;
+
+}
+
+
+
+.memory-photo img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+}
+
+
+
+.memory-photo span{
+
+    display:block;
+
+    padding:20px;
+
+    color:white;
+
+    font-size:18px;
+
+}
+
+
+
+.memory-photo:hover{
+
+    transform:
+
+    translateY(-15px)
+
+    rotate(-3deg);
+
+    box-shadow:
+
+    0 0 40px #60a5fa;
+
+}
+
+
+
+/* =========================
+   PHOTO MODAL
+========================= */
+
+
+.photo-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,.9);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+
+
+.photo-modal img{
+
+    max-width:90%;
+
+    max-height:85%;
+
+    border-radius:20px;
+
+    box-shadow:
+
+    0 0 60px white;
+
+}
+
+
+
+.modal-close{
+
+    position:absolute;
+
+    top:30px;
+
+    right:40px;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:50px;
+
+}
+
+
+
+/* =========================
+   SURPRISE SECTIONS
+========================= */
+
+
+.surprise-wrapper{
+
+    text-align:center;
+
+}
+
+
+
+.flower-button,
+.gift-button{
+
+    margin-top:50px;
+
+}
+
+
+
+.flower-message,
+.gift-message{
+
+    margin-top:40px;
+
+    font-size:25px;
+
+    animation:fadeUp 1s;
+
+}
+
+
+
+/* =========================
+   RESPONSIVE FIX
+========================= */
+
+
+@media(max-width:768px){
+
+
+.screen{
+
+    padding:25px;
+
+}
+
+
+.polaroid img{
+
+    height:320px;
+
+}
+
+
+.timeline::before{
+
+    left:10px;
+
+}
+
+
+.timeline-item{
+
+    width:100%;
+
+    padding-left:50px;
+
+    text-align:left!important;
+
+}
+
+
+.timeline-item .timeline-dot{
+
+    left:0!important;
+
+    right:auto!important;
+
+}
+
+
+.chapter-title{
+
+    font-size:42px;
+
+}
+
+
+.selfie-story{
+
+    font-size:20px;
+
+}
+
+
+.memory-photo img{
+
+    height:250px;
+
+}
+
+
+}
