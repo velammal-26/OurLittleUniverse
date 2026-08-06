@@ -171,7 +171,7 @@ const chapterLines=[
 "Elaa Alagana Kathaiyum Oru alagah edathula Start Agum Nambalthu",
 
 
-"Ours started in a college...",
+"Started in a college...",
 
 
 "Not with love...",
@@ -186,7 +186,7 @@ const chapterLines=[
 "Until one little message...",
 
 
-"Hi Bro 👋"
+"Hi Bro 👋 (Eeeeeeeeee)"
 
 
 ];
@@ -838,7 +838,8 @@ const letterText=[
 "Na vera college poirukalam but ila ",
 "Vera dprt ah iruthurukalam but ila ",
 "Yen vera ah Section lakuda poirukalam",
-"But All happened For some reasons Just to make me meet you and to make me fall in love with you🤍",
+"But All happened For some reasons Just to make me meet you and to make me fall ",
+"Ithutha destiny Soluvaga Pola..😁",
 "Still u been for me in my Ups And Downs ",
 "And Did So many Things for me",
 "Do You Remember 'Ena Vitu Poida Matala' 😄 yeah Always",
@@ -848,14 +849,15 @@ const letterText=[
 "Unoda 40 Keeps kuda Gujaal Panitu irukaa",
 "Sari ila Avlothan Inimey Panatha avlotha sola mudiyum",
 "And Na oru sila things NOte Pani vachiruthen kamikaren",
+
 "(2024)September --14 .Abt one boy", 
-"(2024) September --16 st to talk",
+"(2024) September --16th Texted him and started to talk",
 "(2024) October --6 1st tym went out with clg frds",
 "(2025) Jan 11 (Pongal celebration)",
-   "(2025)Feb 13( started  again to talk)",
+"(2025)Feb 13( started  again to talk)",
 "(2025)Feb 26(the Biggest day that never forgot present ring 7:17 and told me at 7:57)",
 "(2025)June 7 -- Pooja v2ku bike la ponom 🫣",
-"INum iruku but perusa pogum So I stop here",
+"Inum iruku but perusa pogum So I stop here",
 
 "Unta Romba Pidichathu Smile tha sirichitey iru Athukunu suma siricha Paithiyam nenaichipaga Happy ah irunu solren",
 "Love You As Always🤍",
@@ -984,10 +986,10 @@ const finalWords=[
 "Ours is still being written...",
 
 
-"Thank you",
+"Rombaaaaaaa Nandrii-ngaa ",
 
 
-"For being",
+"En Life la Hero Entry Kuduthathuku",
 
 
 "My White Butterfly 🦋🤍"
